@@ -22,6 +22,12 @@ from sqlsugar import migrate
 migrate(engine.connect(), Base.metadata)
 ```
 
+## How it works
+
+We use Alembic to autogenerate the difference between the models you have defined with SQLAlchemy and the database. We then execute operations that create tables, add new columns or add new indexes. That is often all that's needed for rapid prototyping or running very small hobby projects.
+
+However, we don't support renaming columns, dropping columns or removing tables. You should switch to using Alembic as your needs evolve. Alternatively, you can try running those migrations manually.
+
 ## Development
 
 To contribute to this library, first checkout the code. Then create a new virtual environment:
