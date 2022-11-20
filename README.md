@@ -4,7 +4,7 @@
 [![Changelog](https://img.shields.io/github/v/release/Teemu/sqlsugar?include_prereleases&label=changelog)](https://github.com/Teemu/sqlsugar/releases)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Teemu/sqlsugar/blob/main/LICENSE)
 
-Automatic migrations for SQLAlchemy. This is meant for small hobby projects where you want a database but don't want to spend time configuring migrations. This is experimental and you should switch to Alembic if data integrity is important.
+This library is for you if you want to use a real database without spending time to generate migrations. This is experimental and you should switch to [Alembic](https://alembic.sqlalchemy.org/en/latest/) as your project matures. This only supports adding new tables, columns and indexes.
 
 ## Installation
 
