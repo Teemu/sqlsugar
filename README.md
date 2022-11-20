@@ -2,7 +2,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/sqlsugar.svg)](https://pypi.org/project/sqlsugar/)
 [![Changelog](https://img.shields.io/github/v/release/Teemu/sqlsugar?include_prereleases&label=changelog)](https://github.com/Teemu/sqlsugar/releases)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Teemu/sqlsugar/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Teemu/sqlsugar/blob/main/LICENSE)
 
 This library is for you if you want to use a real database without spending time to generate migrations. This is experimental and you should switch to [Alembic](https://alembic.sqlalchemy.org/en/latest/) as your project matures. This only supports adding new tables, columns and indexes.
 
