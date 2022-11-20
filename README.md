@@ -14,7 +14,19 @@ Install this library using `pip`:
 
 ## Usage
 
-Usage instructions go here.
+Look for examples with [SQLAlchemy](https://github.com/Teemu/sqlsugar/blob/main/examples/use_with_sqlalchemy.py) or [SQLModel](https://github.com/Teemu/sqlsugar/blob/main/examples/use_with_sqlmodel.py).
+
+```python
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base
+from sqlsugar import migrate
+
+Base = declarative_base()
+engine = create_engine("sqlite:///example.db")
+
+migrate(engine.connect(), Base.metadata)
+```
 
 ## Development
 
