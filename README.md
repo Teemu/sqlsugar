@@ -16,11 +16,12 @@ Install this library using `pip`:
 
 ## Usage
 
-Look for examples with [SQLAlchemy](https://github.com/Teemu/sqlsugar/blob/main/examples/use_with_sqlalchemy.py) or [SQLModel](https://github.com/Teemu/sqlsugar/blob/main/examples/use_with_sqlmodel.py).
+See our examples for [SQLAlchemy](https://github.com/Teemu/sqlsugar/blob/main/examples/use_with_sqlalchemy.py) and [SQLModel](https://github.com/Teemu/sqlsugar/blob/main/examples/use_with_sqlmodel.py).
 
 ```python
 from sqlsugar import migrate
 
+# You only need this command to handle creating tables & running migrations
 migrate(engine.connect(), Base.metadata)
 ```
 
