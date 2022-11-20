@@ -1,5 +1,7 @@
 # SQLSugar - Automatic migrations for SQLAlchemy
 
+![sqlsugar](https://user-images.githubusercontent.com/53298/202926852-d212a4dc-ee3c-419f-851c-6b814ad3d254.jpg)
+
 [![PyPI](https://img.shields.io/pypi/v/sqlsugar.svg)](https://pypi.org/project/sqlsugar/)
 [![Changelog](https://img.shields.io/github/v/release/Teemu/sqlsugar?include_prereleases&label=changelog)](https://github.com/Teemu/sqlsugar/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Teemu/sqlsugar/blob/main/LICENSE)
