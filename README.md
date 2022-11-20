@@ -29,11 +29,11 @@ To contribute to this library, first checkout the code. Then create a new virtua
     cd sqlsugar
     python -m venv .venv
     source .venv/bin/activate
-    pre-commit install
 
 Now install the dependencies and test dependencies:
 
     pip install -e '.[test]'
+    pre-commit install
 
 To run the tests:
 
