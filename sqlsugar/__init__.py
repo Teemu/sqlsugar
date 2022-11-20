@@ -87,24 +87,29 @@ class DiffToOperation:
         self.op = operations
 
     def CreateTableOp(self, op: CreateTableOp) -> None:
-        logger.info("Creating a table: %r", op)
+        logger.info("%s Creating a table: %r", op.table_name, op)
         op.to_table().create(bind=self.op.migration_context.connection)
 
     def AddColumnOp(self, op: AddColumnOp) -> None:
-        logger.info("Adding a column: %r", op)
+        logger.info("%s: Adding a column to %r", op.table_name, op)
         self.op.add_column(op.table_name, op.column)
 
     def ModifyTableOps(self, op: ModifyTableOps) -> None:
-        logger.info("Modifying a table: %r", op)
+        logger.info("%s: Modifying a table", op.table_name)
         for op2 in op.ops:
             name = op2.__class__.__name__
             if hasattr(self, name):
                 getattr(self, name)(op2)
             else:
-                logger.warn("Unsupported %r" % op2)
+                table_name = getattr(op2, "table_name", "")
+                logger.warn(
+                    "%s: Unsupported operation for %r",
+                    table_name,
+                    op2.__class__.__name__,
+                )
 
     def CreateIndexOp(self, op: CreateIndexOp) -> None:
-        logger.info("Creating an index: %r", op)
+        logger.info("Creating an index: %s %r", op.table_name, op)
         self.op.create_index(
             op.index_name, op.table_name, [x.name for x in op.to_index().expressions]
         )
