@@ -21,7 +21,7 @@ class DiffToOperation:
 
     def AddColumnOp(self, op: AddColumnOp) -> None:
         logger.info("%s: Adding a column to %r", op.table_name, op)
-        self.op.add_column(op.table_name, op.column)
+        self.op.add_column(op.table_name, op.column)  # type: ignore
 
     def ModifyTableOps(self, op: ModifyTableOps) -> None:
         logger.info("%s: Modifying a table", op.table_name)
@@ -39,6 +39,6 @@ class DiffToOperation:
 
     def CreateIndexOp(self, op: CreateIndexOp) -> None:
         logger.info("Creating an index: %s %r", op.table_name, op)
-        self.op.create_index(
+        self.op.create_index(  # type: ignore
             op.index_name, op.table_name, [x.name for x in op.to_index().expressions]
         )

@@ -13,7 +13,7 @@ logging.basicConfig(
 Base = declarative_base()
 
 
-class Cat(Base):
+class Cat(Base):  # type: ignore
     __tablename__ = "cat"
 
     id = Column(Integer, primary_key=True)
@@ -28,7 +28,7 @@ class Cat(Base):
 
 engine = create_engine("sqlite:///example.db")
 
-migrate(engine.connect(), Base.metadata)
+migrate(engine.connect(), Base.metadata)  # type: ignore
 
 
 with Session(engine) as session:
