@@ -1,7 +1,7 @@
 import logging
 
-from sqlalchemy import Column, Integer, Session, String, create_engine
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.orm import Session, declarative_base
 
 from sqlsugar import migrate
 
