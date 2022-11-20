@@ -1,5 +1,6 @@
-from setuptools import setup
 import os
+
+from setuptools import setup
 
 VERSION = "0.1"
 
@@ -27,7 +28,9 @@ setup(
     license="Apache License, Version 2.0",
     version=VERSION,
     packages=["sqlsugar"],
-    install_requires=[],
-    extras_require={"test": ["pytest"]},
+    install_requires=["sqlalchemy", "alembic"],
+    extras_require={
+        "test": ["pytest", "pre-commit", "pytest-sugar", "sqlmodel", "black", "isort"]
+    },
     python_requires=">=3.7",
 )
